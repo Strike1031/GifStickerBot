@@ -5,6 +5,7 @@ import os
 load_dotenv()
 
 from telegram import __version__ as TG_VER
+import conversation.new_gif_conv as new_gif
 import conversation.new_pack_conv as new_pack
 import conversation.del_pack_conv as delete_pack
 import conversation.del_sticker_conv as delete_sticker
@@ -30,6 +31,7 @@ from telegram.ext import Application
 
 
 from conversation.messages import (
+    NEW_GIF_HELP,
     NEW_PACK_HELP,
     ADD_STICKER_HELP,
     DEL_STICKER_HELP,
@@ -57,6 +59,7 @@ logger = logging.getLogger(__name__)
 
 handlers_list = [
     start.get_start_command(),
+    new_gif.get_new_gif_conv(),
     new_pack.get_new_pack_conv(),
     add_sticker.get_add_sticker_conv(),
     delete_pack.delete_pack_conv(),
@@ -66,6 +69,7 @@ handlers_list = [
 
 
 command_info = [
+    BotCommand("newgif", NEW_GIF_HELP),
     BotCommand("newpack", NEW_PACK_HELP),
     BotCommand("addsticker", ADD_STICKER_HELP),
     BotCommand("delsticker", DEL_STICKER_HELP),

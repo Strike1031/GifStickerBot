@@ -1,4 +1,5 @@
 # help
+NEW_GIF_HELP = "Convert Video to Gif"
 NEW_PACK_HELP = "Creates a new stickerpack"
 ADD_STICKER_HELP = "Adds a sticker"
 DEL_STICKER_HELP = "Deletes a sticker"
@@ -9,6 +10,7 @@ CANCEL_HELP = "Cancels current operation \(use this command if stuck\)"
 HELP_MESSAGE = (
     "*Create sticker packs with images, videos\!\n\n"
     + "Available commands:\n"
+    + f"/newgif \- {NEW_GIF_HELP}\n"
     + f"/newpack \- {NEW_PACK_HELP}\n"
     + f"/addsticker \- {ADD_STICKER_HELP}\n"
     + f"/delsticker \- {DEL_STICKER_HELP}\n"
@@ -108,3 +110,12 @@ DELETE_STICKER_SUCCESS_MESSAGE = "Sticker deleted from {}"
 UNHANDLED_ERROR_MESSAGE = "Bot encountered an error, please try again or cancel the current operation with the cancel command"
 
 CANCEL_MESSAGE = "Operation cancelled"
+
+# new gif
+UPLOAD_VIDEO = "Please upload a video"
+INVALID_VIDEO = "Invalid video type"
+VIDEO_SIZE_LIMIT_REACHED_MESSAGE = (
+    "Video file size limit reached, please send a smaller video"
+)
+VIDEO_NAME_MESSAGE = "Please set a video name"
+VIDEO_SUCCESS_MESSAGE = "Gif created: https://t.me/addstickers/{}"
